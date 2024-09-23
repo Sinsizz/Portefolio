@@ -8,7 +8,7 @@ const Home = () => {
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
         <div className="text-center z-10">
           <motion.h1 
-            className="text-8xl font-bold mb-4"
+            className="text-4xl md:text-6xl lg:text-8xl font-bold mb-4"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -18,7 +18,7 @@ const Home = () => {
             <motion.span className="block" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>Développeur.</motion.span>
           </motion.h1>
           <motion.p 
-            className="text-2xl text-gray-400"
+            className="text-lg md:text-xl lg:text-2xl text-gray-400"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
