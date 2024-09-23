@@ -6,9 +6,9 @@ const Contact = () => {
   return (
     <PageTransition>
       <section className="min-h-screen flex items-center justify-center py-20 relative">
-        <div className="container mx-auto px-6 text-center z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <motion.h2 
-            className="text-7xl font-bold mb-8"
+            className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 lg:mb-8"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -16,7 +16,7 @@ const Contact = () => {
             Contact
           </motion.h2>
           <motion.p 
-            className="text-2xl mb-12"
+            className="text-lg sm:text-xl lg:text-2xl mb-8 sm:mb-10 lg:mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -25,7 +25,7 @@ const Contact = () => {
           </motion.p>
           <motion.a
             href="mailto:theo.rouillard@outlook.fr"
-            className="inline-block bg-white text-black py-4 px-8 rounded-full text-xl font-semibold hover:bg-gray-200 transition-colors duration-300"
+            className="inline-block bg-white text-black py-3 px-6 sm:py-4 sm:px-8 rounded-full text-lg sm:text-xl font-semibold hover:bg-gray-200 transition-colors duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ const Contact = () => {
             Contactez-moi
           </motion.a>
           <motion.div 
-            className="mt-12 space-x-6"
+            className="mt-8 sm:mt-10 lg:mt-12 space-x-4 sm:space-x-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -44,7 +44,7 @@ const Contact = () => {
               href="https://github.com/Sinsizz" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-4xl hover:text-gray-400 transition-colors duration-300"
+              className="text-3xl sm:text-4xl hover:text-gray-400 transition-colors duration-300"
             >
               <i className="fab fa-github"></i>
             </a>
@@ -52,7 +52,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/theorouillard" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-4xl hover:text-gray-400 transition-colors duration-300"
+              className="text-3xl sm:text-4xl hover:text-gray-400 transition-colors duration-300"
             >
               <i className="fab fa-linkedin"></i>
             </a>

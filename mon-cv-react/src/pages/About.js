@@ -6,7 +6,7 @@ import { SiTailwindcss, SiRedux, SiReactrouter, SiFramer, SiFontawesome, SiVisua
 
 const SectionTitle = ({ children }) => (
   <motion.h3 
-    className="text-5xl font-bold mb-6 inline-block"
+    className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 inline-block"
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
@@ -17,7 +17,7 @@ const SectionTitle = ({ children }) => (
 
 const Paragraph = ({ children }) => (
   <motion.p 
-    className="text-xl mb-6"
+    className="text-base sm:text-lg lg:text-xl mb-4 sm:mb-6"
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: 0.2 }}
@@ -28,12 +28,12 @@ const Paragraph = ({ children }) => (
 
 const SkillItem = ({ icon: Icon, skill }) => (
   <motion.li
-    className="flex items-center space-x-2 text-xl"
+    className="flex items-center space-x-2 text-base sm:text-lg lg:text-xl"
     initial={{ opacity: 0, x: -20 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.5 }}
   >
-    <Icon className="text-2xl" />
+    <Icon className="text-xl sm:text-2xl" />
     <span>{skill}</span>
   </motion.li>
 );
@@ -44,8 +44,8 @@ const SkillCategory = ({ title, skills }) => (
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: 0.3 }}
   >
-    <h4 className="text-3xl font-semibold mb-4">{title}</h4>
-    <ul className="space-y-3">
+    <h4 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4">{title}</h4>
+    <ul className="space-y-2 sm:space-y-3">
       {skills.map((skill, index) => (
         <SkillItem key={index} icon={skill.icon} skill={skill.name} />
       ))}
@@ -85,10 +85,10 @@ const About = () => {
 
   return (
     <PageTransition>
-      <section className="min-h-screen py-20 relative">
-        <div className="container mx-auto px-6 z-10">
+      <section className="min-h-screen py-12 sm:py-16 lg:py-20 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <motion.h2 
-            className="text-7xl font-bold mb-16"
+            className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-8 sm:mb-12 lg:mb-16"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -96,7 +96,7 @@ const About = () => {
             À propos
           </motion.h2>
           
-          <div className="space-y-24">
+          <div className="space-y-12 sm:space-y-16 lg:space-y-24">
             <div>
               <SectionTitle>Présentation</SectionTitle>
               <Paragraph>
@@ -120,7 +120,7 @@ const About = () => {
 
             <div>
               <SectionTitle>Compétences techniques</SectionTitle>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
                 {skillCategories.map((category, index) => (
                   <SkillCategory 
                     key={index}
